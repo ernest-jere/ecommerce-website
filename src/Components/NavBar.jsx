@@ -8,7 +8,16 @@ export default function NavBar() {
         <Link to="/" className="navbar-brand">
           ShopHub
         </Link>
-        <div className="navbar-links"></div>
+        <div className="navbar-links">
+          <Link to="/">Home</Link>
+          <Link to="/Checkout">Cart</Link>
+        </div>
+          <div className="navbar-auth">
+            <div classname="navbar-auth-links">
+              <Link to="/Auth" className="btn btn-secondsry">Login</Link>
+              <Link to="/Auth" className="btn btn-primary">Logout</Link>
+            </div>
+          </div>
       </div> 
     </nav>
   )

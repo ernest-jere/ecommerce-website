@@ -19,42 +19,84 @@ body {
 }
 
 .navbar {
-  background-color: #333;
-  padding: 1rem 0;
+  background-color: #ffffff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  padding: 1rem 2rem;
 }
 
-.navbar-brand { 
-  display: flex; 
-  justify-content: space-between; 
-  align-items: center; 
-  max-width: 1200px; 
-  margin: 0 auto; 
-  padding: 0 1rem; 
-  flex-wrap: wrap; 
-  gap: 1rem; 
-  color: #fff; 
-  font-size: 1.5rem; 
-  font-weight: bold; 
-  text-decoration: none; 
+/* Flexbox layout to align the three sections in a row */
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Spaces out Brand, Links, and Auth evenly */
+  max-width: 1200px;
+  margin: 0 auto; /* Centers the container content on huge screens */
+}
+
+/* Brand/Logo Styling */
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333333;
+  text-decoration: none;
+}
+
+/* Middle Navigation Links Layout */
+.navbar-links {
+  display: flex;
+  gap: 1.5rem; /* Puts consistent spacing between Home and Cart */
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #555555;
+  font-weight: 500;
+  transition: color 0.2s ease;
 }
 
 .navbar-links a:hover {
-  color: #FFD700;
+  color: #007bff; /* Turns blue on hover */
 }
 
-.navbar-links:hover {
-  color: #FFD700;
-}
-
-.navbar-auth {
+/* Auth Buttons Layout */
+.navbar-auth-links {
   display: flex;
-  gap: 1rem;
-  align-items: center;
+  gap: 1rem; /* Spacing between Login and Logout buttons */
 }
+
+/* Global button baseline specs */
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Secondary Button Style (Login) */
+.btn-secondary {
+  background-color: transparent;
+  color: #007bff;
+  border: 1px solid #007bff;
+}
+
+.btn-secondary:hover {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+/* Primary Button Style (Logout) */
+.btn-primary {
+  background-color: #007bff;
+  color: #ffffff;
+  border: 1px solid #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
 
 .navbar-user {
   display: flex;
