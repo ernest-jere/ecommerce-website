@@ -13,7 +13,7 @@ export default function NavBar() {
           <Link to="/Checkout">Cart</Link>
         </div>
           <div className="navbar-auth">
-            <div classname="navbar-auth-links">
+            <div className="navbar-auth-links">
               <Link to="/Auth" className="btn btn-secondsry">Login</Link>
               <Link to="/Auth" className="btn btn-primary">Logout</Link>
             </div>

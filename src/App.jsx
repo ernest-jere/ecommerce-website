@@ -4,7 +4,7 @@ import './App.css';
 import Home from './pages/Home';
 import Auth from './pages/Auth';
 import Checkout from './pages/Checkout';
-import NavBar from './Components/NavBar';
+import NavBar from './components/NavBar';
 
 function App() {
 
