@@ -43,7 +43,7 @@ const products = [
 
     {
         id: 6,
-        name: "Neckless",
+        name: "Necklace",
         price: "$179.99",
         image: "https://images.pexels.com/photos/20141640/pexels-photo-20141640.jpeg",
         description: "With a continuous, symmetric strand of closely set diamonds, running the full length of the band.",
