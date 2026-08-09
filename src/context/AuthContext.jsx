@@ -16,7 +16,9 @@ export default function AuthProvider({children}) {
        
         const newUsers = {email, password};
         users.push(newUsers);
+        //Saves the updated list of all registered users to the web browser
         localStorage.setItem("users", JSON.stringify(users))
+        //Remembers who is currently logged in.
         localStorage.setItem("currentUserEmail", email)
 
         setUser({email});
