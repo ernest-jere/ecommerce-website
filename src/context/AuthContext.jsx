@@ -1,0 +1,58 @@
+import { createContext, useState, useContext } from "react";
+
+export const AuthContext = createContext(null);
+
+export default function AuthProvider({children}) {
+    const [user, setUser] = useState(localStorage.getItem("currentUserEmail")
+    ? {email: localStorage.getItem("currentUserEmail")}
+    : null);
+
+    function signUp(email, password) {
+        const users = JSON.parse(localStorage.getItem("users")) || [];
+
+        if (users.find(user => user.email === email)) {
+            return {success: false, error: "Email already exist"};
+        }
+       
+        const newUsers = {email, password};
+        users.push(newUsers);
+        //Saves the updated list of all registered users to the web browser
+        localStorage.setItem("users", JSON.stringify(users))
+        //Remembers who is currently logged in.
+        localStorage.setItem("currentUserEmail", email)
+
+        setUser({email});
+
+        return {success: true};
+    }
+
+    function login(email, password) {
+         const users = JSON.parse(localStorage.getItem("users")) || [];
+         const user = users.find(
+            (user) => user.email === email && user.password === password);
+        if(!user) {
+            return ({success: false, error: "Invalid user or password"});
+        }
+
+        localStorage.setItem("currentUserEmail", email)
+
+        setUser({email});
+
+        return {success: true};
+    }
+
+    function logout() {
+        localStorage.removeItem("currentUserEmail");
+        setUser(null);
+    }
+
+    return (
+        <AuthContext.Provider value={{signUp, user, logout, login}}>
+            {children}
+        </AuthContext.Provider>
+    )
+}
+
+export function useAuth() {
+        return useContext(AuthContext);
+}
