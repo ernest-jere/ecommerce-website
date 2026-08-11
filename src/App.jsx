@@ -7,8 +7,7 @@ import Checkout from './pages/Checkout';
 import ProductDetails from './pages/ProductDetails';
 import NavBar from './components/NavBar';
 import AuthProvider from "./context/AuthContext";
-import CartProvider from "./context/cartContext"; // Import the CartProvider]
-
+import CartProvider from "./context/CartContext";
 function App() {
 
   return (

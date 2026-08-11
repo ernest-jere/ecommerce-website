@@ -1,7 +1,7 @@
 import { useNavigate, useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { getProductById } from '../Data/products';
-import { useCart } from '../context/cartContext'; // 1. Crucial Missing Import
+import { useCart } from '../context/CartContext'; // 1. Crucial Missing Import
 
 export default function ProductDetails() {
     const { id } = useParams();

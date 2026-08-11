@@ -1,4 +1,4 @@
-import {useCart} from "../context/cartContext";
+import {useCart} from "../context/CartContext";
 
 
 export default function Checkout() {

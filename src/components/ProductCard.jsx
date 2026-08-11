@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'; // 1. Crucial Missing Import
-import { useCart } from '../context/cartContext'; // 1. Crucial Missing Import
+import { useCart } from '../context/CartContext'; // 1. Crucial Missing Import
 
 export default function ProductCard({ product }) { 
   const { addToCart, cart } = useCart(); // 2. Destructure the addToCart function and cartItems from the cart context
