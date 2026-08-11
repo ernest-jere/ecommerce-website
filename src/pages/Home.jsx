@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { getProducts } from "../Data/Products.js";
+import { getProducts } from "../Data/products.js";
 import ProductCard from "../components/ProductCard";
 
 
