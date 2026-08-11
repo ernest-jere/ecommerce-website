@@ -1,5 +1,5 @@
 import { createContext, useState, useContext } from "react";
-import { getProductById } from "../Data/products";
+import { getProductById } from "../Data/products.js"; // Explicitly add .js
 
 export const CartContext = createContext(null);
 
