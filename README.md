@@ -4,7 +4,7 @@ A high-performance, responsive eCommerce storefront application built with **Rea
 
 ## 🚀 Live Demo
 Experience the fully deployed production application live in your browser:
-👉 **[View Live Storefront](https://ecommerce-website-an3dq0cqb-ernest-jere1.vercel.app)**
+👉 **[View Live Storefront](https://ecommerce-website-15rz41th3-ernest-jere1.vercel.app/)**
 
 ---
 
