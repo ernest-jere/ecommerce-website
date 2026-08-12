@@ -8,7 +8,7 @@ export default function Home() {
     return (
         <div className="page">
             <div className="home-hero">
-                <h1 className="home-title">Welcome To ShopHub</h1>
+                <h1 className="home-title">Welcome To StoreHouse</h1>
                 <p className="home-subtitle">Discover Amazing Products At Great Prices</p>
             </div>
             <div className="container">
